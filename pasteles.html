@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Repostería</title>
+	 
+    <style> 
+        body {
+            font-family: 'Cursive', Arial, sans-serif;
+            background-color: #fff5e6;
+            margin: 0;
+            padding: 0;
+        }
+		h1{
+			font-size:60px; 
+			text-align: center;
+		
+		}
+		h2{
+			font-size: 40px;
+			text-align: center;
+			color:#3D2072;
+		}
+		
+        header {
+            background-color:  #DDA0DD;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            position: relative;
+        }
+	
+		      h4 {
+            position: relative;
+    font-size: 24px;
+    color: #333;
+    animation: bounce 2s infinite, colorChange 2s infinite;
+        }
+
+       @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        color: #333;
+    }
+    50% {
+        color: #f8b400;
+    }
+}
+
+        header img {
+            position: absolute;
+            top: 13px;
+            left: 10px;
+            width: 170px;
+            height: 170px;
+        }
+        
+        main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.caja {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    margin: 20px;
+    padding: 30px;
+    width: 255px;
+    text-align: center;
+}
+
+.caja img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+       footer {
+    background-color:#ffb3b3;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <img src="ds.jpg" alt="Logo de la Pastelería">
+        <h1>PASTELERIA DULCE SABOR</h1>
+		<h4 id="animado" >¡ INSCRIBETE A NUESTRO CURSO GRATIS AHORA !</h4>
+    </header>
+    <div id="menu"></div>
+    <div class="container">
+        <div class="course-description">
+            <h1>Descripción del Curso</h1>
+            <p><h2>Aprende las técnicas básicas y avanzadas de la repostería con nuestro curso completo. Ideal para principiantes y aficionados.</h2></p>
+        </div>
+        <div class="course-topics">
+            <h1>Temas del Curso</h1>
+            <ul>
+                <li><a href="tema1.html">Introducción a la Repostería</a></li>
+                <li><a href="tema2.html">Ingredientes y Herramientas</a></li>
+                <li><a href="tema3.html">Técnicas Básicas</a></li>
+                <li><a href="tema4.html">Decoración de Pasteles</a></li>
+                <li><a href="tema5.html">Recetas Avanzadas</a></li>
+            </ul>
+        </div>
+        <main>
+        <div class="caja">
+            <img src="imagen1.jpg" alt="Imagen 1">
+           
+        </div>
+        <div class="caja">
+            <img src="imagen2.jpg" alt="Imagen 2">
+            
+        </div>
+        <div class="caja">
+            <img src="imagen3.jpg" alt="Imagen 3">
+            
+        </div>
+    </main>
+    </div>
+   <footer>
+   <div class="footer-container">
+            <div class="footer-logo">
+               <h3>PASTELERIA DULCE SABOR</h3>
+            </div>
+	    <h3> Siguenos en nuestras redes sociales:</h3>
+            <div class="footer-social">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="twitter.png" alt="Twitter">
+                </a>
+                <a href="https://wa.me/1234567890" target="_blank">
+                    <img src="whatsapp1.png" alt="WhatsApp">
+                </a>
+            </div>
+            <p>&copy; 2024 Pastelería Dulce Sabor. Todos los derechos reservados.</p>
+        </div>
+  </footer>	
+	
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
+
